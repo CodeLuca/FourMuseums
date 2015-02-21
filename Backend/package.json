@@ -1,0 +1,8 @@
+{
+  "name": "FourMuseum",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "^4.11.2",
+    "mongodb": "~1.4.20"
+  }
+}
