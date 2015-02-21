@@ -14,12 +14,13 @@ class Item: NSObject {
     var name: NSString!
     var location: CLLocationCoordinate2D!
     var locationDescription: NSString!
-    var date: NSString!
+    var date: NSNumber!
     var museumLocation: NSString!
-    var id: NSNumber!
+    var id: NSString!
     var imageId: NSString!
+    var collected: Bool = false
     
-    init(name : NSString, location : CLLocationCoordinate2D, locationDescription: NSString, date: NSString, museumLocation: NSString, id: NSNumber, imageId: NSString) {
+    init(name : NSString, location : CLLocationCoordinate2D, locationDescription: NSString, date: NSNumber, museumLocation: NSString, id: NSString, imageId: NSString) {
         self.name = name
         self.location = location
         self.locationDescription = locationDescription

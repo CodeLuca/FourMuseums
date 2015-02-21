@@ -19,10 +19,17 @@ class ItemCell: UITableViewCell {
             nameLabel.text = item.name
             datePlaceLabel.text = "\(item.date) - \(item.locationDescription)"
             locationInMuseumLabel.text = item.museumLocation
-            let shortId = item.imageId.substringToIndex(5)
-            let url = NSURL(string: "http://media.vam.ac.uk/media/thira/collection_images/\(shortId)/\(item.imageId)_jpg_s.jpg")
-            let imageData = NSData(contentsOfURL: url!)
-            itemImageView.image = UIImage(data: imageData!)
+            let shortId = item.imageId.substringToIndex(6)
+            let url = "http://media.vam.ac.uk/media/thira/collection_images/\(shortId)/\(item.imageId)_jpg_s.jpg"
+            println(url)
+            //let url = NSURL(string: "http://media.vam.ac.uk/media/thira/collection_images/\(shortId)/\(item.imageId)_jpg_s.jpg")
+            dispatch_async(dispatch_get_main_queue()) {
+                let imageData = NSData(contentsOfURL: NSURL(string: url)!)
+                self.itemImageView.image = UIImage(data: imageData!)
+            }
+            if item.collected == true {
+                
+            }
         }
     }
     

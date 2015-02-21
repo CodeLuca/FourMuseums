@@ -43,9 +43,13 @@
     output.metadataObjectTypes = [output availableMetadataObjectTypes];
     
     _videoPreviewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:session];
-    [_videoPreviewLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];
     [_videoPreviewLayer setFrame:_viewPreview.bounds];
     [_viewPreview.layer addSublayer:_videoPreviewLayer];
+    
+    CGRect bounds = self.view.layer.bounds;
+    _videoPreviewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
+    _videoPreviewLayer.bounds=bounds;
+    _videoPreviewLayer.position=CGPointMake(CGRectGetMidX(bounds), CGRectGetMidY(bounds));
     
     [session startRunning];
 }
@@ -71,9 +75,18 @@
 }
 
 - (void)setCodeString:(NSString *)codeString {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:codeString delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
-    [alert show];
+    
     _codeString = codeString;
+    
+    if ([codeString isEqualToString:_itemId]) {
+        [self.navigationController popToRootViewControllerAnimated:YES];
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:_itemId];
+    } else {
+        NSString *message = [NSString stringWithFormat:@"The Codes Are Different!"];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:message delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+        [alert show];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {

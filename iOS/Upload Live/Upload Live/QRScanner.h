@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+
+
 @interface QRScanner : UIViewController
 @property (strong, nonatomic) IBOutlet UIView *viewPreview;
-
+@property (nonatomic, strong) NSString *itemId;
 @end
