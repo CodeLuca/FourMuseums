@@ -15,8 +15,9 @@ request("http://www.vam.ac.uk/api/json/museumobject/", function(error, response,
 
   	for (i=0; i <= 10; i++){
   		body1 = body.records
-  		x = randomInt(0, body1.length)
-
+//  		x = randomInt(0, body1.length)
+		x = i
+		
   		var object = {
   			"Name": body1[x].fields.object,
   			"Location": body1[x].fields.location,
