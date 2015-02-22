@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UITableViewController {
 
 //    let dataUrl = NSURL(string: "http://www.vam.ac.uk/api/json/museumobject")
-    let dataUrl = NSURL(string: "http://172.16.56.81/")
+    let dataUrl = NSURL(string: "http://10.0.1.196:7000/")
     var items = [Item]()
     
     override func viewDidLoad() {
@@ -55,6 +55,7 @@ class ViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
+    
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let vc: UIViewController = self.storyboard!.instantiateViewControllerWithIdentifier("Scanner") as UIViewController
