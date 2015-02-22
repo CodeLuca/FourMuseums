@@ -46,7 +46,7 @@ request("http://www.vam.ac.uk/api/json/museumobject/", function(error, response,
         "QR_URL": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + ids[i],
         "Name": names[i]
     }
-        finalarray2.push(object);
+        finalarray2.push(object); 
     }
 });
 return finalarray2
