@@ -31,7 +31,7 @@ module.exports = {
   qr:function(){
     request("http://www.vam.ac.uk/api/json/museumobject/", function(error, response, body) {
       body = JSON.parse(body)
-      for(i = 0; i <= 10; i++){
+      for(i = 0; i <= 14; i++){
       body1 = body.records;
         var object = {
           "QR_URL": "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + body1[i].pk,
