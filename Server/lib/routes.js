@@ -1,13 +1,13 @@
 var postfile = require('./post.js');
 
-var data = postfile.post()
-var data2 = postfile.img()
+var mainData = postfile.post()
+var qrData = postfile.qr()
 
 module.exports = function (app){
     
     app.get("/", function(req, res){
-	console.log("Request For /")
-	res.send(data)
+	   console.log("Request For /")
+	   res.send(mainData)
     });
 
     app.get("/add", function(req, res){
@@ -15,9 +15,9 @@ module.exports = function (app){
     	console.log("PK CODE IS: " + req.query.code)
     });
 
-    app.get("/img", function(req, res){
-    	console.log('request for /img')
-    	res.send(data2);
+    app.get("/qr", function(req, res){
+    	console.log('request for /qr')
+    	res.send(qrData);
     });
 
 }
