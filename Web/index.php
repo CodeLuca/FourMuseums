@@ -32,7 +32,7 @@
 		<script>
 			var x = <?php echo json_encode($contents); ?>;
 			var json = JSON.parse(x);
-			for (i = 0; i <= json.length; i++) {
+			for (i = 0; i <= json.length - 1; i++) {
 				$('.codes').append('<li><img src="' + json[i].QR_URL + '"/></li>')
 			}
 		</script>
