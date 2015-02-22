@@ -34,7 +34,7 @@ request("http://www.vam.ac.uk/api/json/museumobject/", function(error, response,
     }
 });
 return finalarray
-},
+}, 
 
 
 img:function(){
