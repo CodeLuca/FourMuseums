@@ -59,6 +59,11 @@
 			border-radius: 8px;
 			color: white;
 			text-align: center;
+			cursor: pointer;
+		}
+
+		.codes li a button:hover {
+			background-color: #2ecc71;
 		}
 	</style>
 </head>
