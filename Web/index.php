@@ -55,7 +55,7 @@
 		<ul class="codes"></ul>
 
 		<?php
-			$url = 'http://localhost:3000/qr';
+			$url = 'http://stampwatch.herokuapp.com/qr';
 			$contents = (file_get_contents($url));
 		?>
 
