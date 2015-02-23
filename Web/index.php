@@ -43,7 +43,22 @@
 		.codes li p {
 			text-align: center;
 			font-family: sans-serif;
-			padding-top: 20px;
+			padding-bottom: 10px;
+			font-weight: bold;
+		}
+
+		.codes li a button {
+			background-color: #27ae60;
+			text-decoration: none;
+			padding: 10px;
+			outline: none;
+			margin-top: 20px;
+			border: none;
+			width: 150px;
+			font-family: sans-serif;
+			border-radius: 8px;
+			color: white;
+			text-align: center;
 		}
 	</style>
 </head>
@@ -63,7 +78,7 @@
 			var x = <?php echo json_encode($contents); ?>;
 			var json = JSON.parse(x);
 			for (i = 0; i <= json.length - 1; i++) {
-				$('.codes').append('<li><img src="' + json[i].QR_URL + '"/><p>' + json[i].Name + '</p></li>')
+				$('.codes').append('<li><p>' + json[i].Name + '</p><img src="' + json[i].QR_URL + '"/><a href="' + json[i].QR_URL + '" download><button>Download</button></a></li>')
 			}
 		</script>
 	</div>
