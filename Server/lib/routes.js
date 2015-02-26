@@ -16,7 +16,7 @@ module.exports = function (app){
     });
 
     app.get("/qr", function(req, res){
-    	console.log('request for /qr')
+    	console.log('Request for /qr')
     	res.send(qrData);
     });
 
