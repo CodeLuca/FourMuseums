@@ -7,6 +7,7 @@
 //
 
 #import "QRScanner.h"
+#import "Upload_Live-Swift.h"
 #import <AVFoundation/AVFoundation.h>
 
 @interface QRScanner () <AVCaptureMetadataOutputObjectsDelegate>
@@ -80,7 +81,6 @@
     
     if ([codeString isEqualToString:_itemId]) {
         [self.navigationController popToRootViewControllerAnimated:YES];
-        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:_itemId];
     } else {
         NSString *message = [NSString stringWithFormat:@"The Codes Are Different!"];
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:message delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];

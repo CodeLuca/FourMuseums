@@ -11,10 +11,22 @@ import CoreLocation
 
 class ViewController: UITableViewController {
 
-//    let dataUrl = NSURL(string: "http://www.vam.ac.uk/api/json/museumobject")
     let dataUrl = NSURL(string: "http://172.16.56.81/")
     var items = [Item]()
-    var doneIds = [NSString]()
+    var doneIds: [NSString] = [NSString]() {
+        didSet {
+            if !doneIds.isEmpty {
+                for id in doneIds {
+                    for (i, item) in enumerate(items) {
+                        if id == item.id {
+                            items[i].collected = true
+                        }
+                    }
+                }
+            }
+            tableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,9 +70,8 @@ class ViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("ItemCell") as ItemCell
         cell.item = items[indexPath.row]
-        var scanned = NSUserDefaults.standardUserDefaults().boolForKey(items[indexPath.row].id)
-        if (scanned) {
-            cell.userInteractionEnabled = false;
+        if cell.item.collected {
+            cell.backgroundColor = UIColor.lightGrayColor()
         }
         return cell
     }
