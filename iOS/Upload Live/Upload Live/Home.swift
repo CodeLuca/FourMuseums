@@ -11,7 +11,12 @@ import CoreLocation
 
 class ViewController: UITableViewController {
 
+<<<<<<< HEAD
     let dataUrl = NSURL(string: "http://172.16.56.81/")
+=======
+//    let dataUrl = NSURL(string: "http://www.vam.ac.uk/api/json/museumobject")
+    let dataUrl = NSURL(string: "http://10.0.1.196:7000/")
+>>>>>>> 1494d7516a2ce2c50d08c14c5f6fe62e698b7519
     var items = [Item]()
     var doneIds: [NSString] = [NSString]() {
         didSet {
@@ -83,6 +88,7 @@ class ViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
+    
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         var vc: QRScanner = self.storyboard!.instantiateViewControllerWithIdentifier("Scanner") as QRScanner
