@@ -11,10 +11,11 @@ module.exports = {
   post:function(){
     request("http://www.vam.ac.uk/api/json/museumobject/", function(error, response, body) {
       body = JSON.parse(body)
-      for (i=0; i <= 10; i++){
+      for (i=0; i <= 11; i++){
         body1 = body.records
         var object = {
           "Name": body1[i].fields.object,
+          "Date": body1[x].fields.year_start,
           "Location": body1[i].fields.location,
           "Latitude": body1[i].fields.latitude,
           "Longitude": body1[i].fields.longitude,
