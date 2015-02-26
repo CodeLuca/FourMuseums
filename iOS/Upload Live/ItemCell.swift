@@ -17,7 +17,6 @@ class ItemCell: UITableViewCell {
     var item: Item! {
         didSet {
             nameLabel.text = item.name
-            datePlaceLabel.text = "\(item.date) - \(item.locationDescription)"
             locationInMuseumLabel.text = item.museumLocation
             let shortId = item.imageId.substringToIndex(6)
             let url = "http://media.vam.ac.uk/media/thira/collection_images/\(shortId)/\(item.imageId)_jpg_s.jpg"

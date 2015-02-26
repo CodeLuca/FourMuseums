@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A0660CD1A9F804700201EAA /* logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1A0660CC1A9F804700201EAA /* logo.jpg */; };
 		B537E9DD1A9896720099A03A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B537E9DC1A9896720099A03A /* AppDelegate.swift */; };
 		B537E9DF1A9896720099A03A /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = B537E9DE1A9896720099A03A /* Home.swift */; };
 		B537E9E21A9896720099A03A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B537E9E01A9896720099A03A /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A0660CC1A9F804700201EAA /* logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = logo.jpg; path = ../../Web/logo.jpg; sourceTree = "<group>"; };
 		B537E9D71A9896720099A03A /* Upload Live.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Upload Live.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B537E9DB1A9896720099A03A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B537E9DC1A9896720099A03A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 		B537E9DA1A9896720099A03A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1A0660CC1A9F804700201EAA /* logo.jpg */,
 				B537E9DB1A9896720099A03A /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -174,7 +177,7 @@
 				TargetAttributes = {
 					B537E9D61A9896720099A03A = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = 39J8Y9X9G7;
+						DevelopmentTeam = PVSX8JG8L5;
 					};
 					B537E9EB1A9896720099A03A = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -206,6 +209,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A0660CD1A9F804700201EAA /* logo.jpg in Resources */,
 				B537E9E21A9896720099A03A /* Main.storyboard in Resources */,
 				B537E9E71A9896720099A03A /* LaunchScreen.xib in Resources */,
 				B537E9E41A9896720099A03A /* Images.xcassets in Resources */,
