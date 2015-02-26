@@ -19,7 +19,7 @@ module.exports = {
           "Location": body1[i].fields.location,
           "Latitude": body1[i].fields.latitude,
           "Longitude": body1[i].fields.longitude,
-          "Place": body1[i].fields.Place,
+          "Place": body1[i].fields.place,
           "pk": body1[i].pk,
           "image_id": body1[i].fields.primary_image_id
         }
