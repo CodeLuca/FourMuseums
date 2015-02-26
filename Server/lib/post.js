@@ -20,7 +20,7 @@ module.exports = {
           "Latitude": body1[i].fields.latitude,
           "Longitude": body1[i].fields.longitude,
           "Place": body1[i].fields.place,
-          "pk": body1[i].object_number,
+          "pk": body1[i].fields.object_number,
           "image_id": body1[i].fields.primary_image_id
         }
         dataArray.push(object)
